@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+    <meta name="author" content="">	
+	<meta name="keywords" content="">
+	<link rel="icon" href="image/logo.svg">
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<script src="./js/jquery-3.6.0.min.js"></script>	 
+    <script src="./js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet">
+    <title>QLavish Dashbard</title>
+  </head>
+  <body>
+		<main>
+			<header>
+				<div class="menu-btn"><a class="site-logo"><img class="menu-bar" src="image/menu.svg" id="demo" onclick="closeNav()"></a></div>
+				<a class="site-logo" href="#"><img class="main-logo" src="image/logo.svg"></a>
+				<div class="user-profile">
+				  <div class="profile">
+					<a  class="dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+					 JLT Renting <img class="user-avater" src="image/admin.png">
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+						<li><a class="dropdown-item" href="setting.html"><i class="fa fa-cog"></i> Setting</a></li>
+						<li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+					</ul>
+				  </div>
+				</div>
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-side-menu sticky-top sidebar-menu" id="navbarToggleExternalContent">
+						<div class="align-items-center sticky-top">
+							<ul class="side-menu-nav">
+								<li class="nav-item ">
+									<a href="dashboard.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+											<img class="menu-icon on-hover" src="image/home.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="notification.html" class="nav-link notification-nav-item" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="notification">
+										<img class="menu-icon no-hover" src="image/notification.svg">
+										<span class="notification-bubble">3</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="car-listing.html" class="nav-link " title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Addition">
+										<img  class="menu-icon" src="image/addition.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="scratch-dispute-request.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Profit Report">
+										<img  class="menu-icon" src="image/profit_report.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="earnings.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Earnings">
+										<img   class="menu-icon" class="menu-icon" src="image/earnings.svg">
+									</a>
+								</li>
+								<li class="nav-item active">
+									<a href="renting-deals.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Renting Deals">
+										<img  class="menu-icon" src="image/renting-deals-b.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="setting.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Setting">
+										<img  class="menu-icon" src="image/setting.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Logout">
+										<img  class="menu-icon" src="image/logout.svg"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-11 deshbord-inner-body min-vh-100" id ="uiNavbar">
+						<!-- content -->
+						<div class="main-content">
+							<!--------------page-title-wrapper------------>
+									<!------------------------->
+									<section class="deals-detail">
+									<div class="row">
+											<div class="col-md-12">
+												<div class="page-title-wrapper">
+													<h3 class="page-title">Deal Details</h3>
+												</div>							
+											</div>						
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/user.svg"></span><span class="deals-detail-main-heading">User Details</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-12">
+															<div class="deals-detail-inner-wrapper">
+																<div class="deals-detail-user-avater">
+																	<img class="deals-detail-user-avater-image" src="image/man-avatar-profile.svg">
+																</div>
+																<div class="alerts-user-details">
+																	<h4 class="deals-detail-user-avater-name">Martin</h4>																		
+																	<div class="deals-detail-user-avater-phone">+92111155454</div>
+																	<div class="deals-detail-user-avater-address">Suit no. 10, JLT, Dubai.</div>
+																</div>
+																<div class="detail-user-button"><a class="detail-user-cta"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#user_dov_Modal">Documents</a></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/car-white.svg"></span><span class="deals-detail-main-heading">Car Details</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-12">
+															<div class="deals-detail-inner-wrapper">
+																<div class="alerts-product-img">
+																	<img class="alerts-product-main-img" src="image/alerts-product-img.svg">
+																	<div class="car-code"><b>Code</b>: QLD0001</div>
+																</div>
+																<div class="alerts-product-details">
+																	<h4 class="request-product-name">Mercedes AMG</h4>																		
+																	<div class="deals-detail-reant-per-day"><b>AED</b>: 240 per day</div>
+																	<div class="deals-detail-mileage-Limit">2008     <span class="bullet-point"><img src="image/dot-icon.svg">3.4 ltr.</span>    <span class="bullet-point"><img src="image/dot-icon.svg">2000 km driven</span></div>
+																</div>
+																<div class="alerts-product-confirm"><a href="show-car-detail.html" class="new-req-confirm-cta">Check Details</a></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/details-icon.svg"></span><span class="deals-detail-main-heading">Deal Details</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-5">
+															<div class="deals-detail-info-wrapper">
+																<div class="deals-detail-info"><label class="deals-detail-info">Additional Mileage Charge</label>AED 5 / KM</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Personal Driver</label>Yes</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Personal Driver Charges</label>AED 50 / day</div>
+															</div>
+														</div>
+														<div class="col-md-2">	</div>													
+														<div class="col-md-5">
+															<div class="deals-detail-info-wrapper">
+																<div class="deals-detail-info"><label class="deals-detail-info">Child's Seat</label>No</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Toll Charges</label> AED 5</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">International Driving License</label>Yes</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/calendar-icon.svg"></span><span class="deals-detail-main-heading">Renting Dates and Charges</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-5">
+															<div class="deals-detail-info-wrapper">
+																<div class="deals-detail-info"><label class="deals-detail-info">Renting Date Start</label>16-02-2022</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Renting Date Ending</label>20-02-2022</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">No. of Days</label>4</div>
+															</div>
+														</div>
+														<div class="col-md-2">	</div>													
+														<div class="col-md-5">
+															<div class="deals-detail-info-wrapper">
+																<div class="deals-detail-info"><label class="deals-detail-info">Total Amount</label>AED 500</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Discounts Applied</label> 10%</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Payable Amount</label>AED 450</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/location.svg"></span><span class="deals-detail-main-heading">Pick Up or Delivery Location</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-12">
+															<div class="deals-detail-info-wrapper">
+																<div class="deals-detail-info"><label class="deals-detail-info">Pick Up/Delivery Status</label>Delivery</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Delivery Address</label> Suit no. 8, JLT, Dubai</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Date & Time (Expected)</label>12-06-2022 12:45 PM</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/cashback.svg"></span><span class="deals-detail-main-heading">Payment Details</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-12">
+															<div class="deals-detail-info-wrapper">
+																<div class="deals-detail-info"><label class="deals-detail-info">Payment Method</label>Credit Card</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Payment Mode</label> Reservation</div>
+																<div class="deals-detail-info"><label class="deals-detail-info">Payment Amount</label>AED 200</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 " style="text-align: right;">
+												<button type="submit" class="btn deal-cancel-cta-btn"><span class="deal-cancel-cta-btn-wrapper"><i class="fa fa-close" aria-hidden="true"></i>Cancel</span></button>	
+												
+												<button type="submit" class="btn deal-accept-cta-btn" data-bs-toggle="modal" data-bs-target="#DealAcceptModal"><span class="deal-accept-cta-btn-wrapper"><i class="fa fa-arrow-right" aria-hidden="true"></i>Accept</span></button>
+												
+											</div>
+										</div>
+									</section>
+									<!------------------------->
+									<!-- Documents START Modal -->
+									<div class="modal" id="user_dov_Modal" tabindex="-1" aria-labelledby="UserDocModalLabel" aria-hidden="true">
+									  <div class="modal-dialog user-doc-modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="UserDocModalLabel">Documents</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											 </div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-4">
+														<div class="user-license-wrapper">	
+															 <a href="image/Driving-License-front.svg" target="_blank">
+																<img src="image/Driving-License-front.svg" alt="" >
+															</a>
+														</div>	
+														<h3 class="user-doc-label" >Driving License Front</h3>
+													</div>
+													<div class="col-md-4">
+														<div class="user-license-wrapper">	
+															 <a href="image/Driving-License-back.svg" target="_blank">
+																<img src="image/Driving-License-back.svg" alt="" >
+															</a>
+														</div>	
+														<h3 class="user-doc-label" >Driving License Back</h3>
+													</div>
+													<div class="col-md-4">
+														<div class="user-license-wrapper">	
+															 <a href="image/Passport.svg" target="_blank">
+																<img src="image/Passport.svg" alt="" >
+															</a>
+														</div>	
+														<h3 class="user-doc-label" >Passport</h3>
+													</div>
+												</div>
+										  </div>
+										  <!--<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										  </div>-->
+										</div>
+									  </div>
+									</div>
+									<!-- Documents END Modal-->
+									<!-- DEAL ACCEPT Modal START-->
+									<div class="modal" id="DealAcceptModal" tabindex="-1" aria-labelledby="DealAcceptModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="DealAcceptModalLabel">Deal Accept</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="deal_accept-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="accept-deal-wrapper-question">	
+																	<h3 class="deal-question-headind" >Do you want to accept this deal?</h3> 
+																</div>	
+															</div>
+															<div class="col-md-12">
+																<div class="accept-deal-wrapper-form">
+																	<!------------FORM START----------->
+																	<form>
+																		<div class="mb-3">
+																			<label for="pickup_time" class="form-label">Enter the pickup time</label>
+																			<input type="time" class="form-control" id="pickup_time">
+																		</div>
+																		<div class="mb-3">
+																			<label for="pickup_date" class="form-label">Enter the Pickup date</label>
+																			<input type="date" class="form-control" id="pickup_date">
+																		</div>
+																		<div class="mb-3">
+																			<label for="full_address" class="form-label">Enter the full address</label>
+																			<input type="text" class="form-control" placeholder="Full Address" id="full_address">
+																			
+																		</div>
+																		<div class="mb-3">
+                                                                            
+																			<div class="row">
+																				<div class="col-md-12">
+																					<label for="location_latitude" class="form-label">Enter the pick up location </label>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-6">
+																					<input type="text" class="form-control" id="location_latitude"   placeholder="Latitude">
+																				</div>
+																				<div class="col-md-6">
+																					<input type="text" class="form-control" id="location_longitude" placeholder="Longitude">
+																				</div>
+																			</div>
+                                                                        </div>
+																		 <div class="mb-3">
+                                                                            <label for="note" class="form-label">Note</label>
+                                                                            <textarea type="text" class="form-control" id="note" placeholder="Enter the note"></textarea>
+                                                                        </div>
+																		<button type="submit" class="btn deal-confirmed-button">Submit</button>
+																		<a type="button" class="btn  deal-cancel-button" data-bs-dismiss="modal">Close</a>
+																		
+																	</form>
+																	<!------------FORM END----------->
+																</div>
+															</div>
+															
+														</div>
+													<form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- DEAL ACCEPT Modal END-->
+							<!-----------ENd row--------------->
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="main-footer">All rights reserved by the QLavish.</div>
+			</footer>
+			<!--Logout Modal Start -->
+			<div class="modal user-logout-model" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="main-logo-logout"><img src="image/logo.svg"> </div>
+						<h3 class="logout-heading">Do you want to logout?</h3>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-logout-no" data-bs-dismiss="modal">No</button>
+					<button type="button" class="btn btn-logout-yes">Yes</button>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!--Logout Modal Start -->
+		</main>
+		
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="./js/popper.min.js"></script>
+	<script>
+      function openNav() {
+            
+            var myNav = document.getElementById("navbarToggleExternalContent");
+            
+            myNav.style.display = myNav.style.display === 'none' ? '' : 'none';
+            
+            document.getElementById("demo").onclick = closeNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-12");
+      
+                  element.classList.remove("col-md-12");
+      
+                  element.classList.add("col-6");
+      
+                  element.classList.add("col-6");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-md-12");
+                 
+                  element.classList.remove("col-12");
+      
+                  element.classList.add("col-md-10");
+                  
+                  element.classList.add("col-6");
+      
+      
+            }
+      
+      }
+      
+      function closeNav() {
+      
+            document.getElementById("navbarToggleExternalContent").style.display = "none";
+            
+            document.getElementById("demo").onclick = openNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.remove("col-6");
+      
+                  element.classList.add("col-12");
+      
+                  element.classList.add("col-md-12");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-sm-10");
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.add("col-md-12");
+                  
+                  element.classList.add("col-12");
+      
+            }
+      
+          
+      }
+	 
+    </script>
+   
+  </body>
+</html>

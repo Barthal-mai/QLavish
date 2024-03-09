@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+    <meta name="author" content="">	
+	<meta name="keywords" content="">
+	<link rel="icon" href="image/logo.svg">
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<script src="./js/jquery-3.6.0.min.js"></script>	 
+    <script src="./js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet">
+    <title>QLavish Dashbard</title>
+  </head>
+  <body>
+		<main>
+			<header>
+				<div class="menu-btn"><a class="site-logo"><img class="menu-bar" src="image/menu.svg" id="demo" onclick="closeNav()"></a></div>
+				<a class="site-logo" href="#"><img class="main-logo" src="image/logo.svg"></a>
+				<div class="user-profile">
+				  <div class="profile">
+					<a  class="dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+					 JLT Renting <img class="user-avater" src="image/admin.png">
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+						<li><a class="dropdown-item" href="setting.html"><i class="fa fa-cog"></i> Setting</a></li>
+						<li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+					</ul>
+				  </div>
+				</div>
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-side-menu sticky-top sidebar-menu" id="navbarToggleExternalContent">
+						<div class="align-items-center sticky-top">
+							<ul class="side-menu-nav">
+								<li class="nav-item">
+									<a href="dashboard.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+											<img class="menu-icon" src="image/home.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="notification.html" class="nav-link notification-nav-item" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="notification">
+										<img class="menu-icon" src="image/notification.svg">
+										<span class="notification-bubble">3</span>
+									</a>
+								</li>
+								<li class="nav-item active">
+									<a href="car-listing.html" class="nav-link " title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Addition">
+										<img  class="menu-icon" src="image/addition-b.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="scratch-dispute-request.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Profit Report">
+										<img  class="menu-icon" src="image/profit_report.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="earnings.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Earnings">
+										<img   class="menu-icon" class="menu-icon" src="image/earnings.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="renting-deals.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Renting Deals">
+										<img  class="menu-icon" src="image/renting-deals.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="setting.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Setting">
+										<img  class="menu-icon" src="image/setting.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Logout">
+										<img  class="menu-icon" src="image/logout.svg"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-11 deshbord-inner-body min-vh-100" id ="uiNavbar">
+						<!-- content -->
+						<div class="main-content">
+							<!--------------page-title-wrapper------------>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="page-title-wrapper">
+										<h3 class="page-title">Add New Car</h3>
+									</div>							
+								</div>						
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<!------------------------->
+									<form class="add-car-main-form">
+										<div class="accordion" id="add_car_accordion">
+											<div class="accordion-item">
+												<h2 class="accordion-header" id="add_car_details_acc">
+												  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													<span class="add-car-accordion-img"><img src="image/add-car.svg"></span><span class="add-car-accordion-heading">Add Car Details</span>
+												  </button>
+												</h2>
+												<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="add_car_details_acc" data-bs-parent="#add_car_accordion">
+												  <div class="accordion-body">
+														<div class="add-car-form-wrapper">
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="car_name" placeholder="Car Name">
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_company">
+																				<option value="">Select Car Company</option>
+																				<option value="VW">VW</option>
+																				<option value="BMW">BMW</option>
+																				<option value="Mercedes-Benz">Mercedes-Benz</option>
+																				<option value="Audi">Audi</option>
+																				<option value="Porsche">Porsche</option>
+																				<option value="Toyota">Toyota</option>
+																				<option value="Honda">Honda</option>
+																				<option value="Nissan">Nissan</option>
+																				<option value="Mitsubishi">Mitsubishi</option>
+																				<option value="Suzuki">Suzuki</option>
+																				<option value="Mazda">Mazda</option>
+																				<option value="Hyundai">Hyundai</option>
+																				<option value="KIA">KIA</option>
+																				<option value="Chevrolet">Chevrolet</option>
+																				<option value="FAW">FAW</option>
+																				<option value="Zotye Proton">Zotye Proton</option>
+																				<option value="Daihatsu">Daihatsu</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<select class="add-car-field" id="car_year">
+																				<option value="">Car Year</option>
+																				<option value="2022">2022</option>
+																				<option value="2021">2021</option>
+																				<option value="2000">2000</option>
+																				<option value="2019">2019</option>
+																				<option value="2018">2018</option>
+																				<option value="2017">2017</option>
+																				<option value="2016">2016</option>
+																				<option value="2015">2015</option>
+																				<option value="2014">2014</option>
+																				<option value="2013">2013</option>
+																				<option value="2012">2012</option>
+																				<option value="2011">2011</option>
+																				<option value="2010">2010</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_engine">
+																				<option value="">Car Engine</option>
+																				<option value="1300cc">1300cc</option>
+																				<option value="1400cc">1400cc</option>
+																				<option value="1600cc">1600cc</option>
+																				<option value="2000cc">2000cc</option>
+																			</select>																			
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="gear_box" placeholder="Gear Box">
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_drive">
+																				<option value="">Select Car Drive</option>
+																				<option value="2 WD">2 WD</option>
+																				<option value="4 WD">4 WD</option>
+																			</select>
+																		</div>
+																	</div><div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="top_speed" placeholder="Top Speed">
+																		</div>
+																	</div><div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_transmission">
+																				<option value="">Select Car Transmission</option>
+																				<option value="Auto">Auto</option>
+																				<option value="Manual">Manual</option>
+																			</select>
+																		</div>
+																	</div><div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" id="mileage_limit" placeholder="Mileage Limit" type="number" min="0.00" max="10000.00" step="0.5" >
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_type">
+																				<option value="">Car Type</option>
+																				<option value="Luxury">Luxury</option>
+																				<option value="Sport">Sport</option>
+																				<option value="Sedan">Sedan</option>
+																				<option value="Economy">Economy</option>
+																				<option value="Hybrid">Hybrid </option>
+																				<option value="Petrol">Petrol</option>
+																				<option value="Diesel">Diesel</option>
+																				<option value="SUV">SUV</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field"  id="renting_price_daily" placeholder="Renting Price Daily" type="number" min="0.00" max="10000.00" step="0.5" >
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_category">
+																				<option value="">Select Car Category</option>
+																				<option value="Luxury">Luxury</option>
+																				<option value="Economy">Economy</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" id="renting_price_weekly" placeholder="Renting Price Weekly"  type="number" min="0.00" max="10000.00" step="0.5" >
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<select class="add-car-field" id="car_class">
+																				<option value="">Select Car Class</option>
+																				<option value="Luxury">Luxury</option>
+																				<option value="Economy">Economy</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" id="renting_price_monthly" placeholder="Renting Price Monthly" type="number" min="0.00" max="10000.00" step="0.5" >
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_company.svg" ></span>
+																			<input class="add-car-field"  id="insurance_amount" placeholder="Insurance Amount"  type="number" min="0.00" max="10000.00" step="0.5" >
+																		</div>
+																	</div>
+																	<!----------Discounts Amount----------->
+																	<div class="col-md-6"><!--Discounts for 1 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_1_day" placeholder="Enter Discount for 1 day"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 2 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_2_day" placeholder="Enter Discount for 2 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 3 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_3_day" placeholder="Enter Discount for 3 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 4 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_4_day" placeholder="Enter Discount for 4 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 5 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_5_day" placeholder="Enter Discount for 5 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 6-10 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_6_10_day" placeholder="Enter Discount for 6-10 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 11-15 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_11_15_day" placeholder="Enter Discount for 11-15 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 16-20 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_16_20_day" placeholder="Enter Discount for 16-20 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 21-25 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_21_25_day" placeholder="Enter Discount for 21-25 days"  >
+																		</div>
+																	</div>
+																	<div class="col-md-6"><!--Discounts for 26-30 day-->
+																		<div class="form-control">
+																			<span class="placeholder-icon"><img src="image/car_name.svg" ></span>
+																			<input class="add-car-field" type="text" id="discount_amount_26_30_day" placeholder="Enter Discount for 26-30 days"  >
+																		</div>
+																	</div>
+																	<!----------Discounts Amount END----------->
+																</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item">
+												<h2 class="accordion-header" id="add_car_img_acc">
+												  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													<span class="add-car-accordion-img"><img src="image/add-car.svg"></span><span class="add-car-accordion-heading">Add Car Images</span>
+												  </button>
+												</h2>
+												<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="add_car_img_acc" data-bs-parent="#add_car_accordion">
+													<div class="accordion-body">
+														<div class="row justify-content-around">
+															<div class="col-md-9">
+																<!----------------->
+																	<div class="row">
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>	
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>														
+																	</div>
+																<!----------------->
+															</div>															
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item">
+												<h2 class="accordion-header" id="add_scratch_history">
+												  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													<span class="add-car-accordion-img"><img src="image/add-car.svg"></span><span class="add-car-accordion-heading">Add Scratch History (Maximum 8 Pics)</span>
+												  </button>
+												</h2>
+												<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="add_scratch_history" data-bs-parent="#add_car_accordion">
+												  <div class="accordion-body">
+													<div class="row justify-content-around">
+															<div class="col-md-9">
+																<!----------------->
+																	<div class="row">
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>	
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>
+																		<div class="col-md-3">
+																			<div class="uplode-image">	
+																				<img  class="uplode-main-image" src="image/uplode-image.svg">
+																			</div>
+																		</div>														
+																	</div>
+																<!----------------->
+															</div>															
+														</div>
+												  </div>
+												</div>
+											</div>
+											  <button type="submit" class="btn add-cat-cta-btn"><span class="add-cat-cta-btn-wrapper"><i class="fa fa-plus-square" aria-hidden="true"></i>Save Car</span></button>
+										</div>
+									</form>
+									<!------------------------->
+								</div>
+							</div>
+							<!-----------ENd row--------------->
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="main-footer">All rights reserved by the QLavish.</div>
+			</footer>
+			<!--Logout Modal Start -->
+			<div class="modal user-logout-model" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="main-logo-logout"><img src="image/logo.svg"> </div>
+						<h3 class="logout-heading">Do you want to logout?</h3>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-logout-no" data-bs-dismiss="modal">No</button>
+					<button type="button" class="btn btn-logout-yes">Yes</button>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!--Logout Modal Start -->
+		</main>
+		
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="./js/popper.min.js"></script>
+	<script>
+      function openNav() {
+            
+            var myNav = document.getElementById("navbarToggleExternalContent");
+            
+            myNav.style.display = myNav.style.display === 'none' ? '' : 'none';
+            
+            document.getElementById("demo").onclick = closeNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-12");
+      
+                  element.classList.remove("col-md-12");
+      
+                  element.classList.add("col-6");
+      
+                  element.classList.add("col-6");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-md-12");
+                 
+                  element.classList.remove("col-12");
+      
+                  element.classList.add("col-md-10");
+                  
+                  element.classList.add("col-6");
+      
+      
+            }
+      
+      }
+      
+      function closeNav() {
+      
+            document.getElementById("navbarToggleExternalContent").style.display = "none";
+            
+            document.getElementById("demo").onclick = openNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.remove("col-6");
+      
+                  element.classList.add("col-12");
+      
+                  element.classList.add("col-md-12");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-sm-10");
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.add("col-md-12");
+                  
+                  element.classList.add("col-12");
+      
+            }
+      
+          
+      }
+	  /********************************/
+	 
+    </script>
+   
+  </body>
+</html>

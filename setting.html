@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+    <meta name="author" content="">	
+	<meta name="keywords" content="">
+	<link rel="icon" href="image/logo.svg">
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<script src="./js/jquery-3.6.0.min.js"></script>	 
+    <script src="./js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet">
+    <title>QLavish Dashbard</title>
+  </head>
+  <body>
+		<main>
+			<header>
+				<div class="menu-btn"><a class="site-logo"><img class="menu-bar" src="image/menu.svg" id="demo" onclick="closeNav()"></a></div>
+				<a class="site-logo" href="#"><img class="main-logo" src="image/logo.svg"></a>
+				<div class="user-profile">
+				  <div class="profile">
+					<a  class="dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+					 JLT Renting <img class="user-avater" src="image/admin.png">
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+						<li><a class="dropdown-item" href="setting.html"><i class="fa fa-cog"></i> Setting</a></li>
+						<li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+					</ul>
+				  </div>
+				</div>
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-side-menu sticky-top sidebar-menu" id="navbarToggleExternalContent">
+						<div class="align-items-center sticky-top">
+							<ul class="side-menu-nav">
+								<li class="nav-item">
+									<a href="dashboard.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+											<img class="menu-icon on-hover" src="image/home.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="notification.html" class="nav-link notification-nav-item" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="notification">
+										<img class="menu-icon no-hover" src="image/notification.svg">
+										<span class="notification-bubble">3</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="car-listing.html" class="nav-link " title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Addition">
+										<img  class="menu-icon" src="image/addition.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="scratch-dispute-request.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Profit Report">
+										<img  class="menu-icon" src="image/profit_report.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="earnings.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Earnings">
+										<img   class="menu-icon" class="menu-icon" src="image/earnings.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="renting-deals.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Renting Deals">
+										<img  class="menu-icon" src="image/renting-deals.svg">
+									</a>
+								</li>
+								<li class="nav-item active">
+									<a href="setting.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Setting">
+										<img  class="menu-icon" src="image/setting-b.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Logout">
+										<img  class="menu-icon" src="image/logout.svg"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-11 deshbord-inner-body min-vh-100" id ="uiNavbar">
+						<!-- content -->
+						<div class="main-content">
+							<!--------------page-title-wrapper------------>
+									<!------------------------->
+									<section class="deals-detail">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="page-title-wrapper">
+													<h3 class="page-title">Settings</h3>
+												</div>							
+											</div>						
+										</div>
+										<div class="row">											
+											<div class="col-md-6">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/user.svg"></span><span class="deals-detail-main-heading">Basic Details</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-12">
+															<div class="user-detail-info-wrapper">
+																<div class="User-avater-block">
+																		<div class="deals-detail-user-avater">
+																			
+																			<a  class="dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+																			 <img class="deals-detail-user-avater-image" src="image/man-avatar-profile.svg"> <i class="fa fa-camera" aria-hidden="true"></i>
+																			</a>
+																			<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+																				<li><a class="dropdown-item" href="image/man-avatar-profile.svg" target="_blank"><i class="fa fa-image"></i> View photo</a></li>
+																				<li><a class="dropdown-item" href="#" ><i class="fa fa-edit"></i> Change Photo</a></li>
+																			</ul>
+																		</div>
+																		<h4 class="deals-detail-user-avater-name">Martin</h4>
+																</div>
+																<div class="User-info-block">
+																	<div class="user-detail-info-label">Car Rental Password <a class="change-user-password" href="#" data-bs-toggle="modal" data-bs-target="#passwordModal">Change</a></div>
+																	<div class="user-detail-info-value">**************</div>
+																	<div class="user-detail-info-label">Car Rental Address <a class="change-rental-address" href="#" data-bs-toggle="modal" data-bs-target="#RentalAddressModal">Change </a></div>
+																	<div class="user-detail-info-value">JLT , Palm Jumeirah, Dubai</div>
+																	<div class="user-detail-info-label">Car Delivery Address <a class="change-delivery-address" href="#" data-bs-toggle="modal" data-bs-target="#DeliveryAddressModal">Change</a></div>
+																	<div class="user-detail-info-value">JLT , Palm Jumeirah, Dubai</div>
+																	<div class="user-detail-info-label">Contact No. <a class="change-user-contact" href="#" data-bs-toggle="modal" data-bs-target="#ContactModal">Change</a></div>
+																	<div class="user-detail-info-value">+54654875489765</div>
+																	<div class="user-detail-info-label">Contact Email <a class="change-user-email" href="#" data-bs-toggle="modal" data-bs-target="#UserEmailModal">Change</a></div>
+																	<div class="user-detail-info-value">jlt.renting@gmail.com</div>
+																	<div class="user-detail-info-label">Working Days <a class="change-working-days" href="#" data-bs-toggle="modal" data-bs-target="#WorkingDaysModal">Change</a></div>
+																	<div class="user-detail-info-value">5</div>
+																	<div class="user-detail-info-label">Working Hours  <a class="change-working-hours" href="#" data-bs-toggle="modal" data-bs-target="#WorkingHoursModal">Change</a></div>
+																	<div class="user-detail-info-value">8:00 AM - 5:00 PM</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<h2 class="deals-detail-heding">
+													<span class="deals-detail-icon"><img src="image/location.svg"></span><span class="deals-detail-main-heading">Pick Up or Delivery Location</span>
+												</h2>
+												<div class="deals-detail-wrapper">
+													<div class="row">
+														<div class="col-md-12">
+															<div class="deals-detail-info-wrapper">
+																<iframe src="https://www.google.com/maps/d/embed?mid=1tQ6gketPxv1VQAh7Z_O62SVadPI&ehbc=2E312F" width="100%" height="480"></iframe>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<!------------------------->
+									<!-- Change User-Password Modal START-->
+									<div class="modal change-user-info-model" id="passwordModal" tabindex="-1" aria-labelledby="PasswordModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="PasswordModalLabel">Do you want to change Password?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-password-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_password" class="form-label">Enter new password</label>
+																	<input type="password" class="form-control" id="new_password">
+																</div>
+																<div class="mb-3">
+																	<label for="confirmed_password" class="form-label">Confirmed password</label>
+																	<input type="password" class="form-control" id="confirmed_password">
+																</div>
+																<button type="submit" class="btn content-update-button">Update</button>
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change User-Password Modal START END-->
+									<!-- Change Rental Address Modal START-->
+									<div class="modal change-user-info-model" id="RentalAddressModal" tabindex="-1" aria-labelledby="RentalAddressModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="RentalAddressModalLabel">Do you want to change the car rental address?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-_rental-address-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_car_rental_address" class="form-label">Car rental address</label>
+																	<textarea type="text" class="form-control" id="new_car_rental_address"></textarea>
+																</div>
+																<button type="submit" class="btn content-update-button">Update</button>
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change Rental Address Modal END-->
+									<!-- Change Car Delivery Address Modal START-->
+									<div class="modal change-user-info-model" id="DeliveryAddressModal" tabindex="-1" aria-labelledby="DeliveryAddressModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="RentalAddressModalLabel">Do you want to change the car delivery address?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-delivery-address-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_delivery_address" class="form-label">Car delivery address</label>
+																	<textarea type="text" class="form-control" id="new_delivery_address"></textarea>
+																</div>
+																<button type="submit" class="btn content-update-button">Update</button>
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change Car Delivery Address Modal END-->
+									<!-- Change Contact No Modal START-->
+									<div class="modal change-user-info-model" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="DeliveryAddressModalLabel">Do you want to change the Contact No?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-contact-no-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_contact_no" class="form-label">Contact No</label>
+																	<input type="tel" class="form-control" id="new_contact_no">
+																</div>
+																
+																<button type="submit" class="btn content-update-button">Update</button>
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change Contact No Modal END-->
+									<!-- Change Contact Email Modal START-->
+									<div class="modal change-user-info-model" id="UserEmailModal" tabindex="-1" aria-labelledby="UserEmailModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="RentalAddressModalLabel">Do you want to change the Contact Email?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-contact-email-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_contact_email" class="form-label">Contact Email</label>
+																	<input type="email" class="form-control" id="new_contact_email">
+																</div>
+																<button type="submit" class="btn content-update-button">Update</button>
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+																
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change Contact Email Modal END-->
+									<!-- Change Working Days Modal START-->
+									<div class="modal change-user-info-model" id="WorkingDaysModal" tabindex="-1" aria-labelledby="WorkingDaysModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="RentalAddressModalLabel">Do you want to change the Working Days?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-working-days-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_working_days" class="form-label">Working Days</label>
+																	<input type="text" class="form-control" id="new_working_days">
+																</div>
+																
+																<button type="submit" class="btn content-update-button">Update</button>
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change Working Days Modal END-->
+									<!-- Change Working Hours Modal START-->
+									<div class="modal change-user-info-model" id="WorkingHoursModal" tabindex="-1" aria-labelledby="WorkingHoursModalLabel" aria-hidden="true">
+										  <div class="modal-dialog">
+											<div class="modal-content">
+											  <div class="modal-header">
+												<h5 class="modal-title" id="RentalAddressModalLabel">Do you want to change the Working Hours?</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											  </div>
+											  <div class="modal-body">
+													<form class="change-working-hours-form">
+														<div class="row">
+															<div class="col-md-12">
+																<div class="mb-3">
+																	<label for="new_working_hours" class="form-label">Working Hours</label>
+																	<input type="text" class="form-control" id="new_working_hours">
+																</div>
+																<button type="submit" class="btn content-update-button">Update</button>																
+																<a type="button" class="btn  content-cancel-button" data-bs-dismiss="modal">Close</a>
+															</div>															
+														</div>
+													</form>
+												</div>
+											</div>
+										  </div>
+									</div>
+									<!-- Change Working Hours Modal END-->
+										<!--change photo Modal Start -->
+									<div class="modal user-chnage-photo-model" id="logoutModal" tabindex="-1" aria-labelledby="UserChnagePhotoModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">User Chnage Photo</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<div class="main-logo-logout"><img src="image/logo.svg"> </div>
+												<h3 class="logout-heading">Do you want to Chnage Photo?</h3>
+											</div>
+											<div class="modal-footer">
+											<button type="button" class="btn btn-logout-no" data-bs-dismiss="modal">No</button>
+											<button type="button" class="btn btn-logout-yes">Yes</button>
+											</div>
+										</div>
+										</div>
+									</div>
+								<!--change photo Modal END -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="main-footer">All rights reserved by the QLavish.</div>
+			</footer>
+			<!--Logout Modal Start -->
+			<div class="modal user-logout-model" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="main-logo-logout"><img src="image/logo.svg"> </div>
+						<h3 class="logout-heading">Do you want to logout?</h3>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-logout-no" data-bs-dismiss="modal">No</button>
+					<button type="button" class="btn btn-logout-yes">Yes</button>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!--Logout Modal Start -->
+		</main>
+		
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="./js/popper.min.js"></script>
+	<script>
+      function openNav() {
+            
+            var myNav = document.getElementById("navbarToggleExternalContent");
+            
+            myNav.style.display = myNav.style.display === 'none' ? '' : 'none';
+            
+            document.getElementById("demo").onclick = closeNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-12");
+      
+                  element.classList.remove("col-md-12");
+      
+                  element.classList.add("col-6");
+      
+                  element.classList.add("col-6");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-md-12");
+                 
+                  element.classList.remove("col-12");
+      
+                  element.classList.add("col-md-10");
+                  
+                  element.classList.add("col-6");
+      
+      
+            }
+      
+      }
+      
+      function closeNav() {
+      
+            document.getElementById("navbarToggleExternalContent").style.display = "none";
+            
+            document.getElementById("demo").onclick = openNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.remove("col-6");
+      
+                  element.classList.add("col-12");
+      
+                  element.classList.add("col-md-12");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-sm-10");
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.add("col-md-12");
+                  
+                  element.classList.add("col-12");
+      
+            }
+      
+          
+      }
+	
+    </script>
+   
+  </body>
+</html>

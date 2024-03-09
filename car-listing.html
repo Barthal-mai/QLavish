@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+    <meta name="author" content="">	
+	<meta name="keywords" content="">
+	<link rel="icon" href="/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<script src="./js/jquery-3.6.0.min.js"></script>	 
+    <script src="./js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet">
+    <title>QLavish Dashbard</title>
+  </head>
+  <body>
+		<main>
+			<header>
+				<div class="menu-btn"><a class="site-logo"><img class="menu-bar" src="image/menu.svg" id="demo" onclick="closeNav()"></a></div>
+				<a class="site-logo" href="#"><img class="main-logo" src="image/logo.svg"></a>
+				<div class="user-profile">
+				  <div class="profile">
+					<a  class="dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+					 JLT Renting <img class="user-avater" src="image/admin.png">
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+						<li><a class="dropdown-item" href="setting.html"><i class="fa fa-cog"></i> Setting</a></li>
+						<li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+					</ul>
+				  </div>
+				</div>
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-side-menu sticky-top sidebar-menu" id="navbarToggleExternalContent">
+						<div class="align-items-center sticky-top">
+							<ul class="side-menu-nav">
+								<li class="nav-item ">
+									<a href="dashboard.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+											<img class="menu-icon on-hover" src="image/home.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="notification.html" class="nav-link notification-nav-item" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="notification">
+										<img class="menu-icon no-hover" src="image/notification.svg">
+										<span class="notification-bubble">3</span>
+									</a>
+								</li>
+								<li class="nav-item active">
+									<a href="car-listing.html" class="nav-link " title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Addition">
+										<img  class="menu-icon" src="image/addition-b.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="scratch-dispute-request.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Profit Report">
+										<img  class="menu-icon" src="image/profit_report.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="earnings.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Earnings">
+										<img   class="menu-icon" class="menu-icon" src="image/earnings.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="renting-deals.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Renting Deals">
+										<img  class="menu-icon" src="image/renting-deals.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="setting.html" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Setting">
+										<img  class="menu-icon" src="image/setting.svg">
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Logout">
+										<img  class="menu-icon" src="image/logout.svg"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-11 deshbord-inner-body min-vh-100" id ="uiNavbar">
+						<!-- content -->
+						<div class="main-content">
+							<!--------------page-title-wrapper------------>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="page-title-wrapper">
+										<h3 class="page-title">Car Renting Deals <a class="add-car-cta-wrapper" href="add-car.html"><i class="fa fa-plus-square" aria-hidden="true"></i><span class="add-car-cta">Add Car</span></a></h3>	
+										
+									</div>										
+								</div>
+							</div>
+							<!-------------------------->
+							<div class="row">
+								<div class="col-md-9 car-detail-rent-filter">
+									<div class="car-detail-rent-wrapper">
+										<select class="car-detail-rent-category">
+											<option value="">Select Car Category</option>
+											<option value="">Select Car Category</option>
+											<option value="">Select Car Category</option>
+										</select>
+									</div>
+									<div class="car-detail-rent-wrapper">
+										<select class="car-detail-rent-brand">
+											<option value="">Select Car Brand</option>
+											<option value="">Select Car Brand</option>
+											<option value="">Select Car Brand</option>
+										</select>
+									</div>
+									<div class="car-detail-rent-wrapper">
+										<select class="car-detail-rent-entry">
+											<option value="">Select Car Entry</option>
+											<option value="">Select Car Entry</option>
+											<option value="">Select Car Entry</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 detail-rent-filter">
+									<div class="car-search-wrapper">
+										<form class="deal-status-search" action="">
+											<input class="deal-status-search-input" type="text" placeholder="Search.." name="search">
+											<button class="deal-status-search-btn" type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
+								</div>								
+							</div>
+									<!---------------------------->
+											<div class="row">
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span>3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------List car product end------------->
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+												<div class="col-md-3">
+													<div class="list-product-wrapper">
+														<div class="card-list-car">
+															<div class="card">
+																<div class="card-image-header">																
+																	<span class="edit-car"><a href="edit-car.html"><i class="fa fa-pencil"></i></a></span>
+																	<img src="image/car-image.svg" class="car-main-image" alt="...">
+																	<div class="car-code-wrapper">
+																		<div class="car-code"><b>Code</b>: QLD0001</div>
+																	</div>
+																</div>
+																<div class="card-body">
+																	<h5 class="car-name">Mercedes AMG</h5>
+																	<div class="car-rent-day"><b>AED 240</b> per day</div>
+																	<div class="car-model">2008     <span class="">3.4 ltr.    2000 km driven</div>
+																	<div class="car-added-date"><b>Added</b>: 25-04-2022</div>
+																	<div class="car-rent-time"><b>Rented</b>: 10 times</div>
+																	<span class="hot-car"><img src="image/flames.svg"></span>
+																</div>
+																<div class="card-footer">
+																	<a class="more-info-cta">More Info.</a>
+																</div>
+															</div>
+															</div>
+													</div>
+												</div><!-------------col List car product end------------->			
+											</div><!-------------ROW  List car product end------------->
+										
+									<!---------------------------->
+								
+							
+								<!-------------------------->
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="main-footer">All rights reserved by the QLavish.</div>
+			</footer>
+			<!--Logout Modal Start -->
+			<div class="modal user-logout-model" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="main-logo-logout"><img src="image/logo.svg"> </div>
+						<h3 class="logout-heading">Do you want to logout?</h3>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-logout-no" data-bs-dismiss="modal">No</button>
+					<button type="button" class="btn btn-logout-yes">Yes</button>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!--Logout Modal Start -->
+		</main>
+		
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="./js/popper.min.js"></script>
+	<script>
+      function openNav() {
+            
+            var myNav = document.getElementById("navbarToggleExternalContent");
+            
+            myNav.style.display = myNav.style.display === 'none' ? '' : 'none';
+            
+            document.getElementById("demo").onclick = closeNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-12");
+      
+                  element.classList.remove("col-md-12");
+      
+                  element.classList.add("col-6");
+      
+                  element.classList.add("col-6");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-md-12");
+                 
+                  element.classList.remove("col-12");
+      
+                  element.classList.add("col-md-10");
+                  
+                  element.classList.add("col-6");
+      
+      
+            }
+      
+      }
+      
+      function closeNav() {
+      
+            document.getElementById("navbarToggleExternalContent").style.display = "none";
+            
+            document.getElementById("demo").onclick = openNav;
+      
+            var element = document.getElementById("uiNavbar");
+      
+            var x = window.matchMedia("(max-width: 700px)");
+      
+            if (x.matches) {
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.remove("col-6");
+      
+                  element.classList.add("col-12");
+      
+                  element.classList.add("col-md-12");
+      
+      
+            } else{
+      
+                  element.classList.remove("col-sm-10");
+      
+                  element.classList.remove("col-md-10");
+      
+                  element.classList.add("col-md-12");
+                  
+                  element.classList.add("col-12");
+      
+            }
+      
+          
+      }
+	  
+     
+    </script>
+   
+  </body>
+</html>
